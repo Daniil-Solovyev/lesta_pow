@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  pow_solver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lesta_pow_solver
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    ports:
+      - "5000:5000"
